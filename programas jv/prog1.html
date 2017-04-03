@@ -1,0 +1,42 @@
+<html>
+	<head> 
+		<meta charset="utf-8"/>
+		<title> Página de exemplo </title>
+	</head>
+	<body>
+		<b> Olá, bom dia !!!! </b>
+		<p>
+			nota1<input type="number" id="nota1"/>
+			nota2<input type="number" id="nota2"/>
+			nota3<input type="number" id="nota3"/>
+			nota4<input type="number" id="nota4"/>
+			<br/>
+			<button onclick="brinca()"> media </button>	
+			<br/>
+			Minha media é:
+			<b id="media"> </b> 
+			<br> 
+			<script>
+		function brinca(){
+			// recupera conteúdo do elemento
+			var nota1 = parseFloat(document.getElementById("nota1").value);
+			var nota2 = parseFloat(document.getElementById("nota2").value);
+			var nota3 = parseFloat(document.getElementById("nota3").value);
+			var nota4 = parseFloat(document.getElementById("nota4").value);
+			var media;
+			media= (nota1+nota2+nota3+nota4)/4;
+			// coloco conteúdo no elemento
+			document.getElementById("media").innerHTML = media;	
+		
+			if (media>=6) {
+				document.write('APROVADO');
+			}
+			else {
+				document.write('REPROVADO');
+			}
+		}		
+		</script>
+			
+		</p>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+
+	<head><title> exercicio 20 vetor</title>
+		<script>
+			function inicia(){
+				var vetor= new Array();
+				var vetor1= new Array();
+				var i;
+				var r = 0;
+				// entrada de dados
+				for(i=0;i<10;i++){
+					vetor[i]= parseInt(prompt("Digite numeros"));
+				}		
+				// verifica os positivos
+				for(i=0;i<10;i++){
+					if (vetor[i] > 0 ){
+						vetor1[r]=vetor[i];
+						r++;
+					}
+				}
+				alert(vetor1);
+				document.getElementById("positivos").innerHTML= vetor1;		
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick = "inicia()"> iniciar programa </button>
+		<h3 id = "positivos"></h3>
+	</body>
+</html>

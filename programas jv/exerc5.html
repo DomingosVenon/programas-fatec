@@ -1,0 +1,52 @@
+<html>
+	<body>
+		<head>
+			<meta charset="utf-8">
+			<title>	Exercício 5 </title>
+		</head>
+		<b>Uma empresa decide dar um aumento de 30% aos funcionários com salários inferiores a 500 reais. Faça um programa que receba o salario e mostre o valor do salario reajustado.</b>
+		<p>
+			Digite a senha: <input type="number" id="n1"/>
+			Digite a senha: <input type="number" id="n2"/>
+			<br/>
+			<button onclick="brinca()"> Calcula </button>
+			<br>
+			<b id="media"> </b>
+			<script>
+				function brinca(){
+					var n1 = parseFloat(document.getElementById("n1").value);
+					var n2 = parseFloat(document.getElementById("n2").value);
+					var media;
+					var diferenca
+					var mult
+					var div
+					switch (operacao()) {
+					   	case 1:
+					        media = (n1+n2)/2;
+					        document.write("média é: ", media);
+					        break;
+					    case 2:
+					        diferenca = n1 - n2;
+					        document.write("diferenca é: ", diferenca);
+					        break;
+					    case 3:
+					        mult = n1 * n2
+					        document.write("multiplicação é: ", mult);
+					        break;
+					    case 4:
+					        div = n1 / n2
+					        document.write("divisao é: ", div);
+					        break;
+					}
+
+					if (n1 == 4531){
+						document.write("Acesso permitido");
+					}
+						else {
+							document.write("Acesso negado")
+						}
+				}
+			</script>
+		</p>
+	</body>
+</html>

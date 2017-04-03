@@ -1,0 +1,28 @@
+<html>	
+
+	<head><title> exercicio 21 vetor</title>
+		<script>
+		function inicia(){
+				var vetor = new Array();
+				var vetor1 = new Array();
+				var i , j; 
+				
+				for(i=0;i<10;i++){
+					vetor[i]= parseInt(prompt("Digite numeros"));
+				}		
+				for(i=0;i<10;i++){
+					if(vetor[i] == 0){
+							vetor1[i] = 1;
+					}
+					else vetor1[i] = vetor[i];
+				}	
+				alert(vetor);
+				alert(vetor1);
+		}
+		</script>
+	</head>
+	<body>
+		<button onclick = "inicia()"> iniciar programa</button>
+		
+	</body>
+</html>

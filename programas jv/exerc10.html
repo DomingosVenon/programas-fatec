@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<script>
+			function inicia(){
+				var A = [];
+				var B = [];
+				var C = [];
+				var D = [];
+				var i;
+				var j;
+				var somaB = 0;
+				var cont = 0;
+				// entrada de dados de A
+				for (i = 0; i < 10; i++) {
+					A[i] = parseFloat(prompt("Informe os valores do vetor A"))
+				}
+				// entrada de dados B
+				for (i = 0; i < 5; i++) {
+					B[i] = parseFloat(prompt("Informe os valores do vetor B"))
+					somaB = somaB + B[i];
+				}
+				// constroe o vetor C
+				for (i = 0; i < 10; i++) {
+					if (A[i] % 2 == 0) {
+						C.push(A[i] + somaB);
+					}
+				}
+				// constroe o vetor D
+				for (i = 0; i < 10; i++) {
+					if (A[i] % 2 != 0) {
+						cont = 0;
+						for (j = 0; j < 5; j++){
+							if (A[i] % B[j] == 0) {
+								cont++;
+							}
+						}
+						D.push(cont);
+				}	
+			}
+			alert(C);
+			alert(D);
+		}
+		</script>
+	</head>
+	<body>
+		<button onclick="inicia()">Iniciar</button>
+	</body>
+</html>

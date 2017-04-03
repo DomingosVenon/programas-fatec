@@ -1,0 +1,46 @@
+<html>
+	<head> 
+		<meta charset="utf-8"/>
+		<title> Página de exemplo </title>
+	</head>
+	<body>
+		<b> numero escolha </b>
+		<p>
+			n1<input type="number" id="n1"/>
+			n2<input type="number" id="n2"/>
+			<br/>
+			<h3>opção</h3>
+			<select id="opcao">
+				<option value= "1"> elevar o 1 pelo 2 </option>
+				<option value= "2"> raiz quadrada de cada um dos numeros </option>
+ 				<option value= "3"> raiz cubica de cd um dos numeros</option>
+			
+			</select>
+			<button onclick="escolher()"> calcular </button>	
+			<br/>
+			
+			<br/>
+			<b id="resposta"> </b> 
+			<br/> 
+			<script>
+		function escolher(){
+			// recupera conteúdo do elemento
+			var n1 =  parseFloat(document.getElementById("n1").value);
+			var n2 =  parseFloat(document.getElementById("n2").value);
+			var op =  parseFloat(document.getElementById("opcao").value);
+			
+			switch(op){
+			case 1: elevado= Math.pow(n1,n2);
+					document.getElementById("resposta").innerHTML = "resposta" + elevado;
+			break;
+			case 2: document.getElementById("resposta").innerHTML = "resposta" + Math.sqrt(n1) + Math.sqrt(n2);
+			break;
+			case 3:
+				document.getElementById("resposta").innerHTML = "resposta" + Math.pow (n1,1/3) + " </br>" + Math.pow (n2,1/3)
+			}
+		}		
+		</script>
+			
+		</p>
+	</body>
+</html>

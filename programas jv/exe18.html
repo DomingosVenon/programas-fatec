@@ -1,0 +1,59 @@
+<html>
+	<head><title>exercicio 18</title>
+		<script>
+			function inicia(){
+				var idade, sexo, salario;
+				var media = 0; var qtde = 0;
+				var maioridade, menoridade;
+				var qtdemulheres = 0;
+				var menorsalario; idademenorsalario, idademaiorsalario;
+				
+				idade = parseInt(prompt("Informe a idade"));
+				maioridade = idade; menoridade = idade; 
+				
+				while (idade >=0){
+					qtde++
+					sexo=prompt("Informe o sexo M/F");
+					salario = parseFloat(prompt("Informe salario"));
+					
+					if(qtde==1){
+						menorsalario = salario;
+					}
+					
+					if (salario <menorsalario){
+						menorsalario = salario;
+						idademenorsalario = idade;
+						
+					
+					}
+					media = media + salario;
+					
+					if (idade>maioridade){
+						maioridade = idade;
+					}
+					if (idade<menoridade){
+						menoridade = idade;
+					}
+					if (((sexo=="F")||(sexo =="f"))&&(salario <=200)){
+						qtdemulheres++;
+					}	
+					idade = parseInt(prompt("Informe umaa idade ou digite -1 para sair"));
+				}
+				media = media/qtde
+				document.getElementeById("resultmedia").innerHtml = "media de salario" + media;
+				document.getElementeById("resultmaioridade").innerHtml = "maior idade" + maioridade;
+				document.getElementeById("resultmenoridade").innerHtml = "menor idade" + menoridade;
+				document.getElementeById("resultmenoridade").innerHtml = "qtde de mulheres" + menoridade;
+			)	
+		</script>
+				
+	</head>
+	<body>
+	
+		<button onclick="inicia()"> iniciar programa </button>
+		<h3 id="resultmedia"></h3>
+		<h3 id="resultmaioridade"></h3>
+		<h3 id="resultmenoridade"></h3>
+	
+	</body>
+</html>

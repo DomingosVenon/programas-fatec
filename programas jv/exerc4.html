@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script>
+			function inicia(){
+				var vet = new Array()
+				var i = 0;
+
+				for (var i = 0; i < 3; i++) {
+					vet[i] = parseInt(prompt("Digite os elementos"))
+				}
+					for (var i = 0; i < 3; i++) {
+					
+						if (vet[i] == 30) {
+						document.getElementById("result").innerHTML = document.getElementById("result").innerHTML + "<br/> Posição " + i;
+						}
+					}
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="inicia()">Iniciar</button>
+		<h3 id="result"></h3>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+	<body>
+		<head>
+			<meta charset="utf-8">
+			<title>	Exercício 7 </title>
+		</head>
+		<b>Uma empresa decide dar um aumento de 30% aos funcionários com salários inferiores a 500 reais. Faça um programa que receba o salario e mostre o valor do salario reajustado.</b>
+		<p>
+			Digite seu salário atual <input type="number" id="n1"/>
+			<br/>
+			<button onclick="brinca()"> Calcula </button>
+			<br>
+			<b id="salario"> </b>
+			<script>
+				function brinca(){
+					var n1 = parseFloat(document.getElementById("n1").value);
+					var salario;
+					document.getElementById("salario").innerHTML = salario;
+
+					if (n1 < 500){
+						salario = (n1*0.3) + n1;
+						document.write("Seu novo salário é: ", salario);
+					}
+						else {
+								alert("Você nao tem direito ao aumento")
+							}
+						}
+			</script>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<script>
+			function inicia(){
+				var ingresso;
+				var despesa = 200;
+				var qtde= 120;
+				var saida = "tabela de resultados <br/>";
+				var lucro2=0;
+				var maioring=0;
+				for(ingresso = 5; ingresso >= 1 ; ingresso = ingresso - 0.50){
+					lucro = (ingresso * qtde) - despesa;
+					//prepara para o proximo laço
+					saida = saida + " " + ingresso + " " + qtde + " " + lucro + "<br/> ";
+					qtde = qtde +26;
+					if (lucro > lucro2){
+							lucro2 = lucro;
+							maioring = ingresso;
+					}
+				}
+				document.getElementById("resultado").innerHTML = saida;
+				document.getElementById("mresult").innerHTML = lucro2 + " " + maioring
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="inicia()">
+			iniciar
+		</button>
+		<h3 id="resultado"></h3>
+		<h3 id="mresult"></h3>
+	</body>
+</html>

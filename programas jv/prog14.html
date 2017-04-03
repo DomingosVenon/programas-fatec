@@ -1,0 +1,53 @@
+<html>
+	<head> 
+		<meta charset="utf-8"/>
+		<title> Página de exemplo </title>
+	</head>
+	<body>
+		<b> calculo de salario</b>
+		<p>
+			salario bruto<input type="number" id="salbr"/>
+		
+			<br/>
+			<button onclick="ver()"> calculo </button>	
+			<br/>
+			
+			
+			<script>
+		function ver(){
+			// recupera conteúdo do elemento
+			var salb = parseFloat(document.getElementById("salbr").value);
+			var salacre = 0
+
+			if (salb<=300) {
+					salacre = ((salb*50)/100)+salb
+					document.write(salacre);
+			}
+			else if(salb>300 && salb<=500) {
+					salacre = ((salb*40)/100)+salb
+					document.write(salacre);
+		    }
+				else if(salb>500 && salb <=700) {
+						salacre = ((salb*30)/100)+salb
+						document.write(salacre);
+					}
+					else if (salb>700 && salb>=800) {
+							salacre = ((salb*20)/100)+salb
+							document.write(salacre);
+								
+						}
+						else if (salb>800 && salb<=1000) {
+								salacre = ((salb*10)/100)+salb
+								document.write(salacre);
+							}   
+							else if (salb>1000) {
+									salacre = ((salb*5)/100)+salb
+									document.write(salacre);
+						   }   	
+	    }
+
+		</script>
+			
+		</p>
+	</body>
+</html>

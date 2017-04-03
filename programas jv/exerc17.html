@@ -1,0 +1,27 @@
+<html>
+	<body>
+		<head>
+			<meta charset="utf-8">
+			<title>	Exercício 17 </title>
+		</head>
+		<b>Uma empresa decide dar um aumento de 30% aos funcionários com salários inferiores a 500 reais. Faça um programa que receba o salario e mostre o valor do salario reajustado.</b>
+		<p>
+			Digite a senha: <input type="number" id="n1"/>
+			<br/>
+			<button onclick="brinca()"> Calcula </button>
+			<br>
+			<b id="senha"> </b>
+			<script>
+				function brinca(){
+					var n1 = parseFloat(document.getElementById("n1").value);
+					if (n1 == 4531){
+						document.write("Acesso permitido");
+					}
+						else {
+							document.write("Acesso negado")
+						}
+				}
+			</script>
+		</p>
+	</body>
+</html>

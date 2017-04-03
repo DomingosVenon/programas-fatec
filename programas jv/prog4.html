@@ -1,0 +1,38 @@
+<html>
+	<head> 
+		<meta charset="utf-8"/>
+		<title> Página de exemplo </title>
+	</head>
+	<body>
+		<b> numero maior</b>
+		<p>
+			n1<input type="number" id="n1"/>
+			n2<input type="number" id="n2"/>
+			n3<input type="number" id="n3"/>
+			<br/>
+			<button onclick="nmaior()"> calculo </button>	
+			<br/>
+			
+			
+			<script>
+		function nmaior(){
+			// recupera conteúdo do elemento
+			var n1 = parseFloat(document.getElementById("n1").value);
+			var n2 = parseFloat(document.getElementById("n2").value);
+			var n3 = parseFloat(document.getElementById("n3").value);
+			
+			if (n1>n2 && n1>n3) {
+					document.write(n1);
+			}
+			else if(n2>n1 && n2>n3) {
+					document.write(n2);
+				}
+				else if(n3>n1 && n3>n2) {
+					document.write(n3);
+				}
+		}		
+		</script>
+			
+		</p>
+	</body>
+</html>

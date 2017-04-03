@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script>
+			function inicia(){
+				var vetor = new Array();
+				var i;
+				var media = 0; var maior; var menor;
+				// entrada de dados
+				for (i = 0; i < 10; i++){
+					vetor[i] = parseFloat(prompt("Informe um número: "))
+				}
+				// calcula média, maior e menor
+				maior = vetor[0]; menor = vetor[0]; // assumo
+				for (i = 0; i < 10; i++){
+					media += vetor[i];
+					if (vetor[i] > maior) {
+						maior = vetor[i];
+					}
+					if (vetor[i] < menor) {
+						menor = vetor[i];
+					}
+				}
+				media = media / 10;
+				document.getElementById("media").innerHTML = media;
+				document.getElementById("maior").innerHTML = maior;
+				document.getElementById("menor").innerHTML = menor;
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="inicia()">Calcular</button>
+		<h2 id="media"></h2>
+		<h2 id="maior"></h2>
+		<h2 id="menor"></h2>
+	</body>
+</html>

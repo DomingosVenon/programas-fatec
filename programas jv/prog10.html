@@ -1,0 +1,45 @@
+<html>
+	<head> 
+		<meta charset="utf-8"/>
+		<title> Página de exemplo </title>
+	</head>
+	<body>
+		<b> preço de carro</b>
+		<p>
+			preco<input type="number" id="preco"/>
+		
+			<br/>
+			<button onclick="npre()"> calculo </button>	
+			<br/>
+			
+			
+			<script>
+		function npre(){
+			// recupera conteúdo do elemento
+			var preco = parseFloat(document.getElementById("preco").value);
+			var valord = 0
+			var valorimp = 0
+			var total = 0 
+
+			if (preco<=12000) {
+					valord= ((preco*5)/100)+preco
+					alert(valord);
+			}
+			else if(preco>12000 && preco<25000) {
+					valord= ((preco*10)/100)+preco
+					valorimp= ((preco*15)/100)
+					total= valord + valorimp
+					alert(total);
+				}
+				else if(preco>25000) {
+					valord= ((preco*15)/100)+preco
+					valorimp= ((preco*20)/100)
+					total= valord + valorimp
+					alert(total);
+				}
+		}		
+		</script>
+			
+		</p>
+	</body>
+</html>

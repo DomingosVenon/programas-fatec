@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<script>
+			function inicia(){
+				var vetorCod = new  Array();
+				var vetorQntd = new  Array();
+				var i;
+				var codCliente, codProduto, qntdComprada;
+				
+				// entrada de dados
+				for (i = 0; i < 10; i++){
+					vetorCod[i] = parseInt(prompt("Informe um código: "));
+					vetorQntd[i] = parseInt(prompt("Informe uma quantidade: "));
+				}
+				// processamento
+				codCliente = parseInt(prompt("Informe o código do cliente: "))
+				while (codCliente != 0){
+					codProduto = parseInt(prompt("Informe código para compra: "))
+					for (i = 0 ; i < 10; i++){
+						if (codProduto == vetorCod[i]){ // achou
+							// i é a posição do produto da compra
+							break; // para de procurar
+						}
+					}
+					if (i == 10) { // não achou
+						alert("Produto não encontrado");
+					}
+					else	{
+						qntdComprada = parseInt(prompt("Informe quantidade para compra"));
+						if (qntdComprada <= vetorQntd[i]) { // pode comprar
+							vetorQntd[i] -= qntdComprada; //i é a posição do produto
+							alert("Compra com sucesso");
+						}
+						else	{
+							alert("Sem estoque suficiente");
+						}
+					}
+					codCliente = parseInt(prompt("Informe o código do cliente. Digite 0 para encerrar"));
+				}
+				alert(vetorCod);
+				alert(vetorQntd);
+			}
+
+		</script>
+	</head>
+	<body>
+		<button onclick="inicia()">Iniciar</button>
+	</body>
+</html>
